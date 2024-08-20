@@ -1,7 +1,9 @@
 package test;
 
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import page.DashboardPage;
@@ -16,6 +18,11 @@ public class MoneyTransferTest {
     CardInfo secondCardInfo;
     int firstCardBalance;
     int secondCardBalance;
+
+    @BeforeAll
+    public static void setupAll() {
+        WebDriverManager.chromedriver().setup();
+    }
 
     @BeforeEach
     void setup() {

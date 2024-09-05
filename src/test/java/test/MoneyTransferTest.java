@@ -19,11 +19,6 @@ public class MoneyTransferTest {
     int firstCardBalance;
     int secondCardBalance;
 
-    @BeforeAll
-    public static void setupAll() {
-        WebDriverManager.chromedriver().setup();
-    }
-
     @BeforeEach
     void setup() {
         var loginPage = open("http://localhost:9999", LoginPage.class);
